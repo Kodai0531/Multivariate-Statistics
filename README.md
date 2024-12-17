@@ -34,19 +34,19 @@ reduction techniques, and/or topological data analysis
 ### 4. Analysis and results
 (max 3 pages)
 This section will show actual results after you applied your chosen algorithms.
-• Provide visualisations of the results (max 25% of contents of this section = 0.5 pages total)
-• Interpret the results in the context of your research question
+* Provide visualisations of the results (max 25% of contents of this section = 0.5 pages total)
+* Interpret the results in the context of your research question
 
 ### 5. Interpretation and insights
 (max 0.75 pages)
-• Summarise the key findings for your analysis
-• Discuss the implications of your results in relation to your research question
-• Acknowledge any limitations in your analysis and suggest potential improvements
+* Summarise the key findings for your analysis
+* Discuss the implications of your results in relation to your research question
+* Acknowledge any limitations in your analysis and suggest potential improvements
 
 ### 6. Reflection
 (max 0.25 pages)
-• Reflect on what you learned during the assignment
-• Discuss any challenges you faced and how you addressed them
+* Reflect on what you learned during the assignment
+* Discuss any challenges you faced and how you addressed them
 • Provide thoughts on how this analysis could be extended or applied in real-world contexts
 
 ### 7. Collaboration (if a team)
