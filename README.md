@@ -1,64 +1,113 @@
-# Multivariate-Statistics
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Spotify dataset
 
 ## Objective
-Analyse a dataset to demonstrate your ability to perform multivariate data analysis, including
-clustering, dimensionality reduction, and topological data analysis. Extend the methodologies
-from lectures to a higher level in terms of methodology, graphics, and presentation of results.
 
-## Dataset:the Spotify Tracks dataset, available at
-https://huggingface.co/datasets/maharshipandya/spotify-tracks-
-dataset/blob/main/dataset.csv
+This project explores the diversity of songs in the Spotify Tracks
+Dataset by applying **dimensionality reduction** and **clustering
+techniques**. The objective is to uncover song clusters, identify their
+defining features, and gain insights into patterns within the dataset.
 
-## Report
-### 1.Research question definition
-* Formulate a unique research question or objective related to the dataset
-* Explain the significance of your question and what you aim to discover through your
-analysis
+## Dataset
 
-### 2.Data selection and pre-processing
-* Did you subset the data (i.e. chosen a subset of the data relevant to your research
-question, e.g. specific genres, years, popularity ranges)? Why?
-* Which preprocessing steps did you take? Why?
-	* Handle missing values, if any
-	* Encode categorical variables
-	* Scale or normalise features as appropriate
-### 3.Multivariate analysis strategy
-(max 1 page)
-Describe the following (actual code should be in appendix):
-* Which methods did you use? Choose suitable clustering algorithms, dimensionality
-reduction techniques, and/or topological data analysis
-* Why did you select these? Explain why these methods are appropriate for your analysis.
-* Did you explore the e]ect of di]erent parameters? Why? How?
+**Source:** [Kaggle Spotify Tracks Dataset](https://www.kaggle.com)
 
+-   **Samples:** 114,000 tracks (subset of 10,000 used for analysis).
 
-### 4. Analysis and results
-(max 3 pages)
-This section will show actual results after you applied your chosen algorithms.
-• Provide visualisations of the results (max 25% of contents of this section = 0.5 pages total)
-• Interpret the results in the context of your research question
+-   **Features:** 16 numeric attributes (e.g., 'danceability,' 'tempo')
+    and 4 categorical features (e.g., 'track_genre').
 
-### 5. Interpretation and insights
-(max 0.75 pages)
-• Summarise the key findings for your analysis
-• Discuss the implications of your results in relation to your research question
-• Acknowledge any limitations in your analysis and suggest potential improvements
+### Preprocessing
 
-### 6. Reflection
-(max 0.25 pages)
-• Reflect on what you learned during the assignment
-• Discuss any challenges you faced and how you addressed them
-• Provide thoughts on how this analysis could be extended or applied in real-world contexts
+-   Removed redundant index column.
 
-### 7. Collaboration (if a team)
-If you collaborated on your projects with someone else for coding assistance (pair programming),
-mention in this section who you collaborated with.
+-   Dropped duplicates and missing values.
 
+-   Encoded categorical attributes and standardized numerical features
+    for uniformity.
 
-### Report Format:
-Structure:
-* Title and author information (name, student number, master programme)
-* The sections mentioned above
-* Code appendix 
-  * Code for data preprocessing
-  * Code for data analysis
-  * Code for visualisation
+-   Randomly sampled 10,000 tracks for analysis.
+
+------------------------------------------------------------------------
+
+## Methodology
+
+### 1. **Dimensionality Reduction**
+
+Three methods were tested for dimensional reduction:
+
+-   **PCA:** Best performance based on stress values and correlations.
+
+-   **t-SNE:** Preserved local structure but high stress.
+
+-   **UMAP:** Balanced global and local patterns but less effective than
+    PCA.
+
+### 2. **Clustering**
+
+Three clustering methods were evaluated:
+
+-   **K-Means (k=4):** Selected for its clear separation and
+    interpretability.
+
+-   **Hierarchical & HDBSCAN:** Showed limited scalability and pattern
+    recognition.
+
+Parameter optimization included using the Elbow Method to determine the
+optimal number of clusters.
+
+------------------------------------------------------------------------
+
+## Results
+
+### Cluster Characteristics
+
+Clusters were grouped into four distinct categories based on song
+features:
+
+1.  **Cluster 1:** Upbeat, rhythmic genres (e.g., 'disco,' 'dance').
+
+2.  **Cluster 2:** Intense, high-energy genres (e.g., 'hard rock,'
+    'metal').
+
+3.  **Cluster 3:** Refined, melodic genres (e.g., 'jazz,' 'acoustic').
+
+4.  **Cluster 4:** Calm, atmospheric genres (e.g., 'ambient,'
+    'classical').
+
+### Popularity and Size
+
+-   Cluster 2 and Cluster 3 contained more popular songs.
+
+-   Cluster 4 had the smallest number of songs and the least popularity.
+
+------------------------------------------------------------------------
+
+## Key Findings and Insights
+
+-   **Genre Associations:** Each cluster shows strong correlations with
+    specific genres, reflecting the distinct musical styles captured.
+
+-   **Popularity Trends:** Mid-range clusters (2 and 3) are more
+    popular, while extremes (1 and 4) cater to niche audiences.
+
+-   **Cluster Profiles:** Feature analysis highlights contrasting
+    styles, from energetic tracks to calm, instrumental compositions.
+
+------------------------------------------------------------------------
+
+## Limitations and Future Work
+
+-   **Subset Dependence:** Results are based on a random subset and may
+    not reflect the full dataset.
+
+-   **Fixed Clustering (k=4):** The choice of k may overlook finer
+    nuances.
+
+-   **Future Improvements:** Explore dynamic clustering approaches and
+    integrate listener preferences for a recommendation system.
