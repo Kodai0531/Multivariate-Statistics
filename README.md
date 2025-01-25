@@ -1,28 +1,28 @@
----
+------------------------------------------------------------------------
 
----
+------------------------------------------------------------------------
 
 # Spotify dataset
 
 ## Objective
 
-This project explores the diversity of songs in the Spotify Tracks Dataset by applying **dimensionality reduction** and **clustering techniques**. The objective is to uncover song clusters, identify their defining features, and gain insights into patterns within the dataset.
+This project make a visual representation of the diversity of songs defined in the Spotify Tracks Dataset and make high-dimensional data by applying **dimensionality reduction** and **clustering techniques**. The objective is to uncover song clusters, identify their defining features, and gain insights into patterns within the dataset.
 
 ## Dataset
 
 **Source:** [Kaggle Spotify Tracks Dataset](https://www.kaggle.com)
 
--   **Samples:** 114,000 tracks (subset of 10,000 used for analysis).
+-   **Samples:** 114,000 samples (subset of 10,000 are used fo used for analysis)
 
 -   **Features:** 16 numeric attributes (e.g., 'danceability,' 'tempo') and 4 categorical features (e.g., 'track_genre').
 
 ### Preprocessing
 
--   Removed redundant index column.
+-   Removed redundant index column ('Unnamed:0\').
 
 -   Dropped duplicates and missing values.
 
--   Encoded categorical attributes and standardized numerical features for uniformity.
+-   Encoded categorical attributes into integers and standardized numerical features for uniformity.
 
 -   Randomly sampled 10,000 tracks for analysis.
 
